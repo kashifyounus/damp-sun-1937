@@ -35,6 +35,10 @@ export default defineConfig({
   },
   resolve: {
     mainFields: ["browser", "module", "main"],
+    alias: {
+      "@components": "/app/components",
+      "@hooks": "/app/hooks",
+    },
   },
   build: {
     minify: true,
