@@ -28,7 +28,7 @@ export const action: ActionFunction = async ({ request }) => {
     //const { email } = body;
 
     // Validate input using Zod schema
-    const validatedData = insertAppointmentSchema.safeParse(body);
+    const validatedData = appointmentSchema.safeParse(body);
     if (!validatedData.success) {
       console.log("Validation error: ", validatedData.error.format());
       return new Response(
